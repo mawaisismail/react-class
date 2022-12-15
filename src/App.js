@@ -1,16 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Welcome } from "./components/Welcome";
-import { useState } from "react";
+import { Form } from "./components/form";
 
 function App() {
-  const [isshow, setIsShow] = useState(true);
   return (
     <div className="App">
-      {isshow ? <Welcome name="Awais" /> : <></>}
-      <button onClick={() => setIsShow((prevState) => !prevState)}>
-        is called
-      </button>
+      <Form />
     </div>
   );
 }

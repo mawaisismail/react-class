@@ -4,7 +4,6 @@ import { LoginButton } from "./LoginButton";
 export class Welcome extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = { date: new Date(), toggle: true };
     this.handleClick = this.handleClick.bind(this);
   }
