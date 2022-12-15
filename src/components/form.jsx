@@ -18,7 +18,7 @@ export class Form extends Component {
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     console.log("shouldUpdate", nextState);
-    return false;
+    return true;
   }
 
   UNSAFE_componentWillUpdate(nextProps, nextState, nextContext) {
@@ -30,11 +30,12 @@ export class Form extends Component {
   }
 
   render() {
+    const { count } = this.state;
     return (
       <>
         <legend>Enter temperature in Celsius:</legend>
-        <p>count : {this.state.count}</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+        <p>count : {count}</p>
+        <button onClick={() => this.setState({ count: count + 1 })}>
           Submit
         </button>
       </>
